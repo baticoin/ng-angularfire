@@ -1,0 +1,54 @@
+<div class="container mt-5">
+  <div class="row">
+  
+    <div class="col">
+      <div class="alert alert-dark" style="text-align: center;"*ngIf="!servis.OturumKontrol()">Daha fazla işlem için oturum aç.</div>
+    </div>
+  
+  </div>
+</div>
+<div class="row" style="text-align: center;">
+<div class="col"><img src="assets/task.png" class="mt-10" alt=""></div></div>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      
+        <label for="exampleFormControlSelect2 m-2"><h4>Öğrenci Seç</h4></label>
+        <select multiple class="form-control" #selectxd id="exampleFormControlSelect2">
+          <option>eren@mail.com</option>
+          <option>biro@mail.com</option>
+          <option>batto@mail.com</option>
+          <option>nafiz@mail.com</option>
+        </select>
+
+  <button class="btn btn-primary m-2" (click)="select(selectxd.value)">Ekle</button>
+  <button class="btn btn-danger" (click)="sil(xd.value)">Sil</button>
+</div>
+  <div class="col">
+    
+      <label for="exampleFormControlSelect2"> <h4>Ödev Seç</h4></label>
+      <select multiple class="form-control" id="exampleFormControlSelect2">
+        <option>Toplama-Çıkarma</option>
+        <option>Çarpma-Bölme</option>
+        <option>Cümlede Anlam</option>
+        <option>Sözcükte Anlam</option>
+        
+      
+      
+    </select>
+  
+
+    
+    <button class="btn btn-warning m-2">Gönder</button>
+
+  </div>
+  <div class="row" style="text-align: center;">
+
+            <label for="exampleFormControlSelect2 m-3"><h4>Seçilen</h4></label>
+            <select multiple class="form-control" #xd id="exampleFormControlSelect2">
+              <option *ngFor="let secd of sec">{{secd}}</option>
+            </select>
+            <div class="col">
+    
+              
+</div>
